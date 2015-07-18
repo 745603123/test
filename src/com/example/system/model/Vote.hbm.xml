@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.example.system.model">
+	<class name="Vote" table="vote">
+		<id name="v_id" column="v_id">
+			<generator class="native"></generator><!--采用主键自增长方式 -->
+		</id>
+		<property name="v_title" column="v_title" /><!-- 这里的column值对应数据库中的属性名；如果没有column值，默认等于属性名 -->
+		<property name="v_content" column="v_content" />
+		<property name="u_no" column="u_no" />
+		<property name="v_tnum" column="v_tnum" />
+		<property name="pubtime" column="pubtime" />
+		
+	</class>
+</hibernate-mapping>

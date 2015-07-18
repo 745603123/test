@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>votefinalserver150310</display-name>
+
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.example.system.servlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>com.example.system.servlet.RegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>PublishVote</servlet-name>
+		<servlet-class>com.example.system.servlet.PublishVoteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PublishVote</servlet-name>
+		<url-pattern>/PublishVote</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ReceiveVote</servlet-name>
+		<servlet-class>com.example.system.servlet.ReceiveVoteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReceiveVote</servlet-name>
+		<url-pattern>/ReceiveVote</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>OptionServlet</servlet-name>
+		<servlet-class>com.example.system.servlet.OptionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>OptionServlet</servlet-name>
+		<url-pattern>/OptionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddVote</servlet-name>
+		<servlet-class>com.example.system.servlet.AddVoteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddVote</servlet-name>
+		<url-pattern>/AddVote</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+</web-app>
